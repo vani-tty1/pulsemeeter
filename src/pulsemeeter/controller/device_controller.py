@@ -233,7 +233,10 @@ class DeviceController(SignalModel):
         output_sel_channels = output_device.get_selected_channel_list()
         port_map = connection_model.str_port_map(input_sel_channels, output_sel_channels)
 
-        pmctl.link_channels(input_device.name, output_device.name, port_map, state)
+        try:
+            pmctl.link_channels(input_device.name, output_device.name, port_map, state)
+        except RuntimeError:
+            LOG.error("Device ports not found, device probably disconnected")
 
     def update_connection(self, input_type, input_id, output_type, output_id, connection_model):
         '''
