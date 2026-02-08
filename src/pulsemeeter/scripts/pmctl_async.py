@@ -6,11 +6,6 @@ import pulsectl_asyncio
 from pulsemeeter.model.types import PulseEvent
 
 LOG = logging.getLogger('generic')
-# PULSE = pulsectl.Pulse('pmctl')
-
-# TODO: Use a single PulseAsync object
-
-PULSE = pulsectl_asyncio.PulseAsync('pmctl_async')
 
 
 async def init(device_type: str, device_name: str, channel_num: int = 2):
