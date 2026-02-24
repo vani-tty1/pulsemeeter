@@ -5,6 +5,9 @@ This is a fork of [pulsemeeter.](https://github.com/theRealCarneiro/pulsemeeter)
 This is strictly for packaging this project into `.deb` and `.rpm` formats.
 Do not report packaging specific bugs to the original developer
 
+[![Copr build status](https://copr.fedorainfracloud.org/coprs/vaniiiiii/pulsemeeter/package/pulsemeeter/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/vaniiiiii/pulsemeeter/package/pulsemeter/)
+
+
 
 # Pulsemeeter
 
