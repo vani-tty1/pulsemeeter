@@ -8,6 +8,7 @@ BuildArch:      noarch
 
 BuildRequires:  python3-devel
 BuildRequires:  pyproject-rpm-macros
+BuildRequires:  git
 
 %description
 Pulsemeeter is an audio routing application for PulseAudio/PipeWire.
@@ -25,6 +26,13 @@ Pulsemeeter is an audio routing application for PulseAudio/PipeWire.
 %pyproject_install
 %pyproject_save_files pulsemeeter
 
+
+rm -rf %{buildroot}%{_datadir}/licenses/%{name}
+
+%find_lang %{name}
+
+cat %{name}.lang >> %{pyproject_files}
+
 %files -f %{pyproject_files}
 %doc README.md
 %license LICENSE
@@ -35,4 +43,4 @@ Pulsemeeter is an audio routing application for PulseAudio/PipeWire.
 
 %changelog
 * Tue Feb 24 2026 Vani <vani@fedora> - 2.0.0-1
-- Update build macros to meet Fedora 43/44 Python packaging guidelines
+- Fix build errors with translations and duplicate license
