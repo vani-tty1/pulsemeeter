@@ -1,3 +1,11 @@
+# Notice 
+
+This is a fork of [pulsemeeter.](https://github.com/theRealCarneiro/pulsemeeter)
+
+This is strictly for packaging this project into `.deb` and `.rpm` formats.
+Do not report packaging specific bugs to the original developer
+
+
 # Pulsemeeter
 
 A frontend to ease the use of pulseaudio's routing capabilities, much like voicemeeter's workflow
